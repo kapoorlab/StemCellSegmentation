@@ -1,6 +1,5 @@
 # Stem Cell Segmentation challenge resolver : StardistforCurie using 128-256 ray model using custom U-net
 
-Time over for games now we play at the adults table, archived play version of this repo at stardistforcurie at this page
 
 For overlapping cell segmentation using convex polygon approach developed by CSB Dresden for data generated at Institut Curie
 
