@@ -12,11 +12,13 @@ from skimage.filters import threshold_otsu, threshold_mean
 from skimage.exposure import rescale_intensity
 from Normalize import Path,normalizeMinMax
 
-def ConnecProbability(img, minsize):
+def ConnecProbability(img, minsize, erodetimes):
       
       thresh = threshold_mean(img)
       binary  =  img > thresh
-      binary = binary_erosion(binary)  
+      for i in range(erodetimes): 
+       binary = binary_erosion(binary)  
+       
       binary = fill_label_holes(binary[:,:] )
       labels, nr_objects = ndimage.label(binary > 0) 
       nonormimg = fill_label_holes(labels[:,:] )
